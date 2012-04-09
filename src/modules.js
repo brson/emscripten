@@ -259,7 +259,7 @@ var LibraryManager = {
   load: function() {
     assert(!this.library);
 
-    for (var suffix in set('', '_sdl', '_browser', '_gl', '_glut', '_xlib', '_egl')) {
+    for (var suffix in set('', '_sdl', '_browser', '_gl', '_glut', '_xlib', '_egl', '_rust')) {
       eval(processMacros(preprocess(read('library' + suffix + '.js'))));
     }
   },
